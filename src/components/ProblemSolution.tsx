@@ -30,19 +30,19 @@ export const ProblemSolution = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Problem card */}
-          <Card className="border-destructive/20 bg-destructive/5">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-destructive/10">
-                  <AlertCircle className="w-6 h-6 text-destructive" />
+          <Card className="border-destructive/30 bg-destructive/5 hover:shadow-lg transition-shadow">
+            <CardContent className="p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="p-3 rounded-full bg-destructive/10">
+                  <AlertCircle className="w-7 h-7 text-destructive" />
                 </div>
-                <h3 className="text-2xl font-bold">The Problem</h3>
+                <h3 className="text-2xl font-bold text-foreground">The Problem</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {problems.map((problem, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">{problem}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 flex-shrink-0" />
+                    <span className="text-base text-muted-foreground leading-relaxed">{problem}</span>
                   </li>
                 ))}
               </ul>
@@ -50,19 +50,19 @@ export const ProblemSolution = () => {
           </Card>
 
           {/* Solution card */}
-          <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <CheckCircle2 className="w-6 h-6 text-primary" />
+          <Card className="border-primary/30 bg-primary/5 hover:shadow-lg transition-shadow">
+            <CardContent className="p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <CheckCircle2 className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Our Solution</h3>
+                <h3 className="text-2xl font-bold text-foreground">Our Solution</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {solutions.map((solution, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground font-medium">{solution}</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-base text-foreground font-medium leading-relaxed">{solution}</span>
                   </li>
                 ))}
               </ul>
