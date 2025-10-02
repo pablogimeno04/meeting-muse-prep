@@ -1,31 +1,30 @@
-import { Calendar, Search, FileText, Send } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight, ArrowDown } from "lucide-react";
+import step1 from "@/assets/step-1-calendar.jpg";
+import step2 from "@/assets/step-2-research.jpg";
+import step3 from "@/assets/step-3-pdf.jpg";
+import step4 from "@/assets/step-4-delivery.jpg";
 
 export const HowItWorks = () => {
   const steps = [
     {
-      icon: Calendar,
-      title: "Automatic Detection",
-      description: "Connects to Google Calendar and identifies your upcoming client meetings",
-      color: "from-blue-500 to-blue-600"
+      image: step1,
+      title: "Connect to Google Calendar",
+      description: "Automatically detects your upcoming client meetings and extracts key information"
     },
     {
-      icon: Search,
-      title: "360° Research",
-      description: "Analyzes internal documents, CRM data, news, LinkedIn, and company websites",
-      color: "from-purple-500 to-purple-600"
+      image: step2,
+      title: "360° Information Gathering",
+      description: "AI searches internal documents, CRM, news, LinkedIn, and company websites"
     },
     {
-      icon: FileText,
-      title: "Executive Briefing",
-      description: "Generates context, visual KPIs, suggested agenda, and intelligent questions",
-      color: "from-pink-500 to-pink-600"
+      image: step3,
+      title: "Generate Executive Briefing",
+      description: "Creates a comprehensive PDF with context, KPIs, agenda, and strategic questions"
     },
     {
-      icon: Send,
-      title: "Proactive Delivery",
-      description: "Automatically sends briefing 24-48 hours before via email or Slack",
-      color: "from-indigo-500 to-indigo-600"
+      image: step4,
+      title: "Automatic Delivery",
+      description: "Sends the complete briefing 24-48 hours before your meeting via email or Slack"
     }
   ];
 
@@ -37,35 +36,82 @@ export const HowItWorks = () => {
             How it works
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Four automated steps to ensure you arrive prepared for every meeting
+            Four automated steps from calendar to inbox
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {steps.map((step, index) => (
-            <Card 
-              key={index} 
-              className="relative overflow-hidden group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            >
-              <CardContent className="p-6">
-                {/* Step number */}
-                <div className="absolute top-4 right-4 text-6xl font-bold text-muted/10">
+        {/* Desktop: Horizontal Flow */}
+        <div className="hidden lg:block max-w-7xl mx-auto">
+          <div className="flex items-center justify-between gap-4">
+            {steps.map((step, index) => (
+              <div key={index} className="flex items-center flex-1">
+                <div className="flex flex-col items-center w-full">
+                  {/* Step Number Badge */}
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg mb-4">
+                    {index + 1}
+                  </div>
+                  
+                  {/* Screenshot */}
+                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-border mb-4 hover:shadow-xl transition-shadow">
+                    <img 
+                      src={step.image} 
+                      alt={step.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* Text Content */}
+                  <h3 className="text-lg font-bold mb-2 text-center">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+
+                {/* Arrow between steps */}
+                {index < steps.length - 1 && (
+                  <div className="mx-4 flex-shrink-0">
+                    <ArrowRight className="w-8 h-8 text-primary" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile/Tablet: Vertical Flow */}
+        <div className="lg:hidden max-w-2xl mx-auto">
+          <div className="flex flex-col gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="flex flex-col items-center">
+                {/* Step Number Badge */}
+                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl mb-4">
                   {index + 1}
                 </div>
-
-                {/* Icon with gradient */}
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.color} p-3 mb-4 relative z-10`}>
-                  <step.icon className="w-full h-full text-white" />
+                
+                {/* Screenshot */}
+                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-border mb-4 hover:shadow-xl transition-shadow">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                {/* Text Content */}
+                <h3 className="text-xl font-bold mb-2 text-center">{step.title}</h3>
+                <p className="text-sm text-muted-foreground text-center leading-relaxed max-w-md">
                   {step.description}
                 </p>
-              </CardContent>
-            </Card>
-          ))}
+
+                {/* Arrow between steps */}
+                {index < steps.length - 1 && (
+                  <div className="my-6">
+                    <ArrowDown className="w-8 h-8 text-primary" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
