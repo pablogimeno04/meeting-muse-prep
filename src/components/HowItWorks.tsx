@@ -1,5 +1,5 @@
 import { ArrowRight, ArrowDown } from "lucide-react";
-import step1 from "@/assets/step-1-calendar.jpg";
+import step1 from "@/assets/step-1-calendar.png";
 import step2 from "@/assets/step-2-research.jpg";
 import step3 from "@/assets/step-3-pdf.jpg";
 import step4 from "@/assets/step-4-delivery.jpg";
