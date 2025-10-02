@@ -5,33 +5,33 @@ export const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: "IA Agentic Avanzada",
-      description: "Agente autónomo que investiga, analiza y prepara información sin intervención humana"
+      title: "Advanced AI Agent",
+      description: "Autonomous agent that researches, analyzes, and prepares information without human intervention"
     },
     {
       icon: BarChart3,
-      title: "KPIs Visuales",
-      description: "Gráficas y métricas clave del cliente presentadas de forma clara y ejecutiva"
+      title: "Visual KPIs",
+      description: "Client metrics and key performance indicators presented in clear, executive-ready charts"
     },
     {
       icon: Users,
-      title: "Análisis de Asistentes",
-      description: "Información de LinkedIn y contexto de cada participante en la reunión"
+      title: "Attendee Analysis",
+      description: "LinkedIn profiles and context for each meeting participant automatically compiled"
     },
     {
       icon: Clock,
-      title: "Ahorro de Tiempo Masivo",
-      description: "De 3 horas de preparación a solo 3 minutos de revisión del briefing"
+      title: "Massive Time Savings",
+      description: "From 3 hours of preparation to 3 minutes of briefing review"
     },
     {
       icon: Shield,
-      title: "Seguridad Enterprise",
-      description: "Integración segura con tus datos corporativos y CRM bajo estándares SOC2"
+      title: "Enterprise Security",
+      description: "Secure integration with corporate data and CRM systems under SOC2 standards"
     },
     {
       icon: Zap,
-      title: "Entrega Automática",
-      description: "Briefings enviados proactivamente sin que tengas que solicitarlos"
+      title: "Proactive Delivery",
+      description: "Briefings automatically sent 24-48 hours before meetings without requesting"
     }
   ];
 
@@ -40,10 +40,10 @@ export const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Características que marcan la diferencia
+            Enterprise-grade capabilities
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Todo lo que necesitas para llegar preparado a cada reunión estratégica
+            Everything you need to arrive prepared for strategic meetings
           </p>
         </div>
 

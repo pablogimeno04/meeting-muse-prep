@@ -6,10 +6,10 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { label: "Características", href: "#features" },
-    { label: "Cómo funciona", href: "#how-it-works" },
-    { label: "Precios", href: "#pricing" },
-    { label: "Contacto", href: "#contact" }
+    { label: "Features", href: "#features" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "Contact", href: "#contact" }
   ];
 
   return (
@@ -36,8 +36,8 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost">Iniciar Sesión</Button>
-            <Button>Solicitar Demo</Button>
+            <Button variant="ghost">Sign In</Button>
+            <Button>Request Demo</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -64,8 +64,8 @@ export const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" className="w-full">Iniciar Sesión</Button>
-                <Button className="w-full">Solicitar Demo</Button>
+                <Button variant="ghost" className="w-full">Sign In</Button>
+                <Button className="w-full">Request Demo</Button>
               </div>
             </div>
           </div>

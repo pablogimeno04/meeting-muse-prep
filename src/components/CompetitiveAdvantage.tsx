@@ -4,23 +4,23 @@ export const CompetitiveAdvantage = () => {
   const advantages = [
     {
       icon: Zap,
-      title: "Automático y Proactivo",
-      description: "A diferencia de asistentes reactivos, nuestro agente actúa antes de que lo solicites"
+      title: "Proactive Automation",
+      description: "Unlike reactive assistants, our agent acts before you need to ask"
     },
     {
       icon: Target,
-      title: "Integración Real",
-      description: "Conexión nativa con Calendar, CRM y herramientas enterprise que ya utilizas"
+      title: "Native Integration",
+      description: "Seamless connection with Calendar, CRM, and enterprise tools you already use"
     },
     {
       icon: LineChart,
-      title: "Contexto Cualitativo + Cuantitativo",
-      description: "Narrativa ejecutiva combinada con KPIs y gráficas para decisiones informadas"
+      title: "Qualitative + Quantitative Context",
+      description: "Executive narrative combined with KPIs and charts for informed decisions"
     },
     {
       icon: Brain,
-      title: "Enfoque 360°",
-      description: "Análisis completo de personas, empresa, proyectos, KPIs y preguntas en un solo briefing"
+      title: "360° Analysis",
+      description: "Complete analysis of people, company, projects, KPIs, and questions in one briefing"
     }
   ];
 
@@ -29,10 +29,10 @@ export const CompetitiveAdvantage = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            ¿Por qué somos diferentes?
+            Why we're different
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ventajas competitivas que nos hacen únicos en el mercado
+            Competitive advantages that make us unique in the market
           </p>
         </div>
 
@@ -58,11 +58,11 @@ export const CompetitiveAdvantage = () => {
         </div>
 
         <div className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">Nuestra visión</h3>
+          <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Convertirnos en el <span className="text-foreground font-semibold">copiloto de reuniones líder</span> en 
-            consultoría y grandes empresas, con IA que no solo prepara, sino que también <span className="text-foreground font-semibold">anticipa 
-            oportunidades de negocio</span> y aprende del historial de interacciones.
+            Become the <span className="text-foreground font-semibold">leading meeting copilot</span> for 
+            consulting and enterprise firms, with AI that not only prepares but also <span className="text-foreground font-semibold">anticipates 
+            business opportunities</span> and learns from interaction history.
           </p>
         </div>
       </div>

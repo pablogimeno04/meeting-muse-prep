@@ -13,11 +13,11 @@ export const CTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white space-y-8">
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            Transforma cómo preparas tus reuniones
+            Transform how you prepare for meetings
           </h2>
           
           <p className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto">
-            Únete a consultores que ya ahorran horas cada semana con IA agentic
+            Join consultants already saving hours each week with AI-powered preparation
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -25,7 +25,7 @@ export const CTA = () => {
               size="lg" 
               className="text-lg px-8 bg-white text-primary hover:bg-white/90 group"
             >
-              Solicitar Demo Gratuita
+              Request Free Demo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -34,12 +34,12 @@ export const CTA = () => {
               className="text-lg px-8 bg-transparent text-white border-white hover:bg-white/10"
             >
               <Mail className="mr-2 w-5 h-5" />
-              Contactar Ventas
+              Contact Sales
             </Button>
           </div>
 
           <p className="text-sm opacity-75 pt-4">
-            14 días de prueba gratuita • Sin tarjeta de crédito • Configuración en 5 minutos
+            14-day free trial • No credit card required • 5-minute setup
           </p>
         </div>
       </div>

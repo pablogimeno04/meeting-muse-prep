@@ -7,43 +7,43 @@ export const Pricing = () => {
     {
       name: "Professional",
       price: "30",
-      description: "Para consultores individuales",
+      description: "For individual consultants",
       features: [
-        "Briefings ilimitados",
-        "Integración con Google Calendar",
-        "Análisis de fuentes públicas",
-        "KPIs y gráficas visuales",
-        "Agenda sugerida automática",
-        "Soporte por email"
+        "Unlimited briefings",
+        "Google Calendar integration",
+        "Public data source analysis",
+        "Visual KPIs and charts",
+        "Automatic agenda suggestions",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Enterprise",
-      price: "Personalizado",
-      description: "Para equipos y organizaciones",
+      price: "Custom",
+      description: "For teams and organizations",
       features: [
-        "Todo lo de Professional",
-        "Integración con CRM corporativo",
-        "Acceso a datos internos",
-        "Power BI y analítica avanzada",
-        "Briefings personalizados",
-        "Soporte prioritario 24/7",
-        "Gestor de cuenta dedicado"
+        "Everything in Professional",
+        "Corporate CRM integration",
+        "Internal data access",
+        "Power BI and advanced analytics",
+        "Custom briefing templates",
+        "24/7 priority support",
+        "Dedicated account manager"
       ],
       popular: true
     },
     {
       name: "Premium Services",
-      price: "A medida",
-      description: "Servicios adicionales",
+      price: "Custom",
+      description: "Additional services",
       features: [
-        "Personalización de briefings",
-        "Integración de datos confidenciales",
-        "Desarrollo de métricas custom",
-        "Capacitación del equipo",
-        "Consultoría estratégica",
-        "SLA garantizado"
+        "Briefing customization",
+        "Confidential data integration",
+        "Custom metrics development",
+        "Team training programs",
+        "Strategic consulting",
+        "Guaranteed SLA"
       ],
       popular: false
     }
@@ -54,10 +54,10 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Planes flexibles para cada necesidad
+            Flexible plans for every need
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Desde consultores individuales hasta grandes equipos enterprise
+            From individual consultants to large enterprise teams
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export const Pricing = () => {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-accent text-white text-sm font-semibold rounded-full">
-                  Más Popular
+                  Most Popular
                 </div>
               )}
               
@@ -78,10 +78,10 @@ export const Pricing = () => {
                 <CardDescription>{plan.description}</CardDescription>
                 <div className="pt-4">
                   <span className="text-4xl font-bold">
-                    {plan.price === "Personalizado" || plan.price === "A medida" ? plan.price : `€${plan.price}`}
+                    {plan.price === "Custom" ? plan.price : `$${plan.price}`}
                   </span>
-                  {plan.price !== "Personalizado" && plan.price !== "A medida" && (
-                    <span className="text-muted-foreground">/usuario/mes</span>
+                  {plan.price !== "Custom" && (
+                    <span className="text-muted-foreground">/user/month</span>
                   )}
                 </div>
               </CardHeader>
@@ -102,7 +102,7 @@ export const Pricing = () => {
                   className="w-full" 
                   variant={plan.popular ? "default" : "outline"}
                 >
-                  {plan.price === "Personalizado" || plan.price === "A medida" ? "Contactar" : "Comenzar ahora"}
+                  {plan.price === "Custom" ? "Contact Sales" : "Get Started"}
                 </Button>
               </CardFooter>
             </Card>
@@ -110,7 +110,7 @@ export const Pricing = () => {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-12">
-          Todos los planes incluyen 14 días de prueba gratuita. Sin tarjeta de crédito requerida.
+          All plans include a 14-day free trial. No credit card required.
         </p>
       </div>
     </section>

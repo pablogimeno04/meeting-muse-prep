@@ -3,17 +3,17 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const ProblemSolution = () => {
   const problems = [
-    "2-3 horas perdidas por reunión recopilando información",
-    "Falta de consistencia en la preparación",
-    "Riesgo de olvidar puntos críticos",
-    "Información desactualizada o incompleta"
+    "2-3 hours wasted per meeting gathering information",
+    "Inconsistent preparation quality across teams",
+    "Risk of missing critical discussion points",
+    "Outdated or incomplete information"
   ];
 
   const solutions = [
-    "Briefing completo en 3 minutos automáticamente",
-    "Calidad homogénea garantizada para todos",
-    "IA que anticipa y recomienda preguntas clave",
-    "Datos actualizados de múltiples fuentes al instante"
+    "Complete briefing in 3 minutes automatically",
+    "Consistent quality guaranteed for all consultants",
+    "AI that anticipates and recommends key questions",
+    "Real-time data from multiple sources instantly"
   ];
 
   return (
@@ -21,10 +21,10 @@ export const ProblemSolution = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            El tiempo es el activo más valioso
+            Time is your most valuable asset
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            En consultoría, cada hora cuenta. Dejemos que la IA haga el trabajo previo.
+            In consulting, every hour matters. Let AI handle the preparation work.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export const ProblemSolution = () => {
                 <div className="p-2 rounded-lg bg-destructive/10">
                   <AlertCircle className="w-6 h-6 text-destructive" />
                 </div>
-                <h3 className="text-2xl font-bold">El problema</h3>
+                <h3 className="text-2xl font-bold">The Problem</h3>
               </div>
               <ul className="space-y-4">
                 {problems.map((problem, index) => (
@@ -56,7 +56,7 @@ export const ProblemSolution = () => {
                 <div className="p-2 rounded-lg bg-primary/10">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Nuestra solución</h3>
+                <h3 className="text-2xl font-bold">Our Solution</h3>
               </div>
               <ul className="space-y-4">
                 {solutions.map((solution, index) => (

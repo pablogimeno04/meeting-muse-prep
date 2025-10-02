@@ -2,28 +2,28 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 
 export const Footer = () => {
   const links = {
-    producto: [
-      { label: "Características", href: "#" },
-      { label: "Precios", href: "#" },
-      { label: "Casos de Uso", href: "#" },
-      { label: "Integraciones", href: "#" }
+    product: [
+      { label: "Features", href: "#" },
+      { label: "Pricing", href: "#" },
+      { label: "Use Cases", href: "#" },
+      { label: "Integrations", href: "#" }
     ],
-    empresa: [
-      { label: "Sobre Nosotros", href: "#" },
+    company: [
+      { label: "About Us", href: "#" },
       { label: "Blog", href: "#" },
       { label: "Careers", href: "#" },
-      { label: "Contacto", href: "#" }
+      { label: "Contact", href: "#" }
     ],
-    recursos: [
-      { label: "Documentación", href: "#" },
-      { label: "Guías", href: "#" },
+    resources: [
+      { label: "Documentation", href: "#" },
+      { label: "Guides", href: "#" },
       { label: "API", href: "#" },
-      { label: "Soporte", href: "#" }
+      { label: "Support", href: "#" }
     ],
     legal: [
-      { label: "Privacidad", href: "#" },
-      { label: "Términos", href: "#" },
-      { label: "Seguridad", href: "#" },
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
+      { label: "Security", href: "#" },
       { label: "Cookies", href: "#" }
     ]
   };
@@ -38,7 +38,7 @@ export const Footer = () => {
               MeetingPrep 360°
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              IA agentic para preparar reuniones estratégicas
+              AI-powered meeting intelligence for strategic preparation
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
@@ -55,9 +55,9 @@ export const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4">Producto</h4>
+            <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2">
-              {links.producto.map((link, index) => (
+              {links.product.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
@@ -68,9 +68,9 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Empresa</h4>
+            <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              {links.empresa.map((link, index) => (
+              {links.company.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
@@ -81,9 +81,9 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Recursos</h4>
+            <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              {links.recursos.map((link, index) => (
+              {links.resources.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
@@ -109,10 +109,10 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 MeetingPrep 360°. Todos los derechos reservados.
+            © 2025 MeetingPrep 360°. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Hecho con IA para profesionales que valoran su tiempo
+            Built with AI for professionals who value their time
           </p>
         </div>
       </div>
