@@ -40,14 +40,14 @@ export const HowItWorks = () => {
           </p>
         </div>
 
-        {/* Desktop: Horizontal Flow */}
-        <div className="hidden lg:block max-w-7xl mx-auto">
-          <div className="flex items-center justify-between gap-4">
+        {/* Desktop: 2x2 Grid with Arrows */}
+        <div className="hidden lg:block max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="flex items-center flex-1">
+              <div key={index} className="relative">
                 <div className="flex flex-col items-center w-full">
                   {/* Step Number Badge */}
-                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl mb-4">
                     {index + 1}
                   </div>
                   
@@ -61,15 +61,25 @@ export const HowItWorks = () => {
                   </div>
 
                   {/* Text Content */}
-                  <h3 className="text-lg font-bold mb-2 text-center">{step.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">{step.title}</h3>
                   <p className="text-sm text-muted-foreground text-center leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
-                {/* Arrow between steps */}
-                {index < steps.length - 1 && (
-                  <div className="mx-4 flex-shrink-0">
+                {/* Arrows */}
+                {index === 0 && (
+                  <div className="absolute -right-6 top-1/2 -translate-y-1/2">
+                    <ArrowRight className="w-8 h-8 text-primary" />
+                  </div>
+                )}
+                {index === 1 && (
+                  <div className="absolute left-1/2 -bottom-6 -translate-x-1/2">
+                    <ArrowDown className="w-8 h-8 text-primary" />
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="absolute -right-6 top-1/2 -translate-y-1/2">
                     <ArrowRight className="w-8 h-8 text-primary" />
                   </div>
                 )}
