@@ -1,19 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Menu, LogOut, User } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const { user, signOut } = useAuth();
 
   const menuItems = [
     { label: "Features", href: "#features" },
@@ -46,28 +36,8 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <User className="w-5 h-5" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={() => signOut()}>
-                    <LogOut className="w-4 h-4 mr-2" />
-                    Cerrar sesión
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <>
-                <Button variant="ghost" onClick={() => navigate("/auth")}>
-                  Iniciar Sesión
-                </Button>
-                <Button>Request Demo</Button>
-              </>
-            )}
+            <Button variant="ghost">Sign In</Button>
+            <Button>Request Demo</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -94,30 +64,8 @@ export const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                {user ? (
-                  <Button 
-                    variant="ghost" 
-                    className="w-full justify-start" 
-                    onClick={() => signOut()}
-                  >
-                    <LogOut className="w-4 h-4 mr-2" />
-                    Cerrar sesión
-                  </Button>
-                ) : (
-                  <>
-                    <Button 
-                      variant="ghost" 
-                      className="w-full" 
-                      onClick={() => {
-                        navigate("/auth");
-                        setIsOpen(false);
-                      }}
-                    >
-                      Iniciar Sesión
-                    </Button>
-                    <Button className="w-full">Request Demo</Button>
-                  </>
-                )}
+                <Button variant="ghost" className="w-full">Sign In</Button>
+                <Button className="w-full">Request Demo</Button>
               </div>
             </div>
           </div>
