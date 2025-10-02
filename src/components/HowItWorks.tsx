@@ -41,7 +41,7 @@ export const HowItWorks = () => {
         </div>
 
         {/* Desktop: 2x2 Grid with Arrows */}
-        <div className="hidden lg:block max-w-5xl mx-auto">
+        <div className="hidden lg:block max-w-4xl mx-auto">
           <div className="grid grid-cols-2 gap-12">
             {steps.map((step, index) => (
               <div key={index} className="relative">
@@ -52,7 +52,7 @@ export const HowItWorks = () => {
                   </div>
                   
                   {/* Screenshot */}
-                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-border mb-4 hover:shadow-xl transition-shadow">
+                  <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg border border-border mb-4 hover:shadow-xl transition-shadow max-w-md mx-auto">
                     <img 
                       src={step.image} 
                       alt={step.title}
@@ -99,7 +99,7 @@ export const HowItWorks = () => {
                 </div>
                 
                 {/* Screenshot */}
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden shadow-lg border border-border mb-4 hover:shadow-xl transition-shadow">
+                <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg border border-border mb-4 hover:shadow-xl transition-shadow max-w-md mx-auto">
                   <img 
                     src={step.image} 
                     alt={step.title}
